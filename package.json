@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lf-dev/ddd-br/issues"
   },
-  "homepage": "https://github.com/lf-dev/ddd-br#readme"
+  "homepage": "https://github.com/lf-dev/ddd-br#readme",
+  "dependencies": {
+    "request-json": "^0.6.2"
+  }
 }
