@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fs = require('fs');
 
 const ddds = JSON.parse(fs.readFileSync('resources/ddd-raw.json'));
 
