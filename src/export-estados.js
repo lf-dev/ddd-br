@@ -7,4 +7,17 @@ const es = ddds.reduce((estados, cidade) => {
   return estados;
 }, new Set());
 
-console.log(es);
+
+const dddPorEstado = {};
+es.forEach( estado => {
+
+  dddPorEstado[estado] = {};
+
+  ddds.filter( ddd => {
+    return ddd.estado == estado;
+  }).forEach( ddd => {
+    dddPorEstado[estado][ddd.cidade] = ddd.ddd;
+  });
+});
+
+fs.writeFile('resources/ddd-estado.json', JSON.stringify(dddPorEstado, null, 2));
